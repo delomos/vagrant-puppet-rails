@@ -9,12 +9,13 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider :virtualbox do |v|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-    v.customize ["modifyvm", :id, "--memory", 256]
+    v.customize ["modifyvm", :id, "--memory", 512]
   end
 
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
   config.vm.hostname = "rails.dev"
   config.vm.network :forwarded_port, guest: 3000, host: 6666
+
 
   config.vm.provision :puppet do |puppet|
     puppet.module_path = "modules"

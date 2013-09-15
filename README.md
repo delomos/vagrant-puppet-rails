@@ -12,6 +12,7 @@ It is based on Ubuntu 12.04 and it contains:
 * RVM
 * ruby-1.9.3-p385
 * Passenger
+* Imagemagick
 
 How to use
 ----------
