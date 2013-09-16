@@ -54,7 +54,13 @@ rvm_gem {
     ruby_version => 'ruby-1.9.3',
     ensure => latest,
     require => Rvm_system_ruby['ruby-1.9.3'];
-}
+
+    'capistrano':
+    name => 'capistrano',
+    ruby_version => 'ruby-1.9.3',
+    ensure => latest,
+    require => Rvm_system_ruby['ruby-1.9.3'];
+} ->
 
 class { 'mysql':
   bind_address => '0.0.0.0',
